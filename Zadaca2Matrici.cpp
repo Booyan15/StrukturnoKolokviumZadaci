@@ -23,29 +23,26 @@ int main() {
         }
     }
 
-    // Променливи за најголемиот непарен број и неговата позиција
-    int maxNeparen = INT_MIN;
-    int maxRed = -1, maxKolona = -1;
+    // Иницијализација на најголемиот непарен број
+    int maxNeparen = INT_MIN, maxRed = 0, maxKolona = 0;
 
     // Пребарување на најголемиот непарен број
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            if (matrica[i][j] % 2 != 0) { // Проверка дали бројот е непарен
-                if (matrica[i][j] > maxNeparen) {
-                    maxNeparen = matrica[i][j];
-                    maxRed = i;
-                    maxKolona = j;
-                }
+            if (matrica[i][j] % 2 != 0 && matrica[i][j] > maxNeparen) {
+                maxNeparen = matrica[i][j];
+                maxRed = i + 1; // Позиции со индекси почнуваат од 1
+                maxKolona = j + 1;
             }
         }
     }
 
     // Печатење на резултатот
-    if (maxRed != -1 && maxKolona != -1) {
-        cout << "Најголемиот непарен број е: " << maxNeparen << endl;
-        cout << "Неговата позиција е: (" << maxRed + 1 << ", " << maxKolona + 1 << ")" << endl;
-    } else {
+    if (maxNeparen == INT_MIN) {
         cout << "Нема непарни броеви во матрицата." << endl;
+    } else {
+        cout << "Најголемиот непарен број е: " << maxNeparen << endl;
+        cout << "Неговата позиција е: (" << maxRed << ", " << maxKolona << ")" << endl;
     }
 
     return 0;

@@ -1,38 +1,297 @@
-<! DOCTYPE html>
-<html lang="en" >
-‹head >
-‹meta charset="UTF-8">
-‹meta name="viewport"
-content="width=device-width, initial-scale=1. 0">
-‹title>The Alchemist Journey</title >
-‹link rel="stylesheet" href="style.css">
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0;
-font-family: 'Segoe UI', sans-serif;}
-body {
-Line-height: 1.6; background-color: #f7f7f7;
-｝
-.header {
-background-color: #1elele; color: white;
-padding: 1rem 2rem;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Alchemist Journey</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
+body {
+  line-height: 1.6;
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 1rem 2rem;
+}
+
 .navbar {
-display: flex; justify-content: space-between;
-align-items: center;}
-navbar nav a { margin-left: 15px;
-color: white; text-decoration: none; font-size: 0.95rem;
-｝
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar nav a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
 .hero {
-background:
-url('https://wallpapercave.com/wp/wp9420654.j
-pg') no-repeat center center/cover;
-color: white; text-align: center; padding: 100px 20px;
-｝
-.hero-content h2 { font-size: 2rem; margin-bottom: 10px;
-｝
-.hero-content p { font-size: 1rem; margin-bottom: 20px;
-｝
-.hero-content button { background-color: #ffcc00;
-border: none;
-padding: 10px 20px; font-weight: bold;
-cursor: pointer:
+  background: url('https://wallpapercave.com/wp/wp9420654.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.hero-content button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.why-read {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 10%;
+  background-color: #fff;
+}
+
+.why-read .text {
+  flex: 1;
+}
+.why-read .image {
+  flex: 1;
+  text-align: right;
+}
+
+.why-read img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.encounters, .omens {
+  padding: 40px 10%;
+  background-color: #f2f2f2;
+}
+.encounters h3, .omens h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.contact {
+  padding: 40px 10%;
+  display: flex;
+  gap: 30px;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+.contact form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact form input,
+.contact form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact form button {
+  padding: 10px;
+  background-color: #ffcc00;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact .info {
+  flex: 1;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-content > div {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-content h4 {
+  margin-bottom: 10px;
+  color: #f0c674;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-content ul li {
+  margin-bottom: 8px;
+}
+
+.footer-content ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <h1>The Alchemist</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">The Journey</a>
+        <a href="#">Omens</a>
+        <a href="#">Encounters</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Embark on Your Alchemical Quest</h2>
+      <p>Discover treasures of the soul and desert wisdom alongside Santiago.</p>
+      <button>Start Reading</button>
+    </div>
+  </section>
+
+  <section class="why-read">
+    <div class="text">
+      <h3>Why Read The Alchemist?</h3>
+          <p><strong>Timeless Wisdom</strong><br>
+      A shepherd's odyssey through dunes reveals the secrets that lie within.</p>
+      <p><strong>Life’s Omens</strong><br>
+      Learn to read signs in the wind, the land, and your own heart.</p>
+    </div>
+    <div class="image">
+      <img src="https://m.media-amazon.com/images/I/51Z0nLAfLmL.jpg" alt="The Alchemist Book Cover">
+    </div>
+  </section>
+
+  <section class="encounters">
+    <h3>Legendary Encounters</h3>
+    <div class="cards">
+      <div class="card"><img src="https://via.placeholder.com/150"><p>The King of Salem</p></div>
+      <div class="card"><img src="https://via.placeholder.com/150"><p>Meeting the Alchemist</p></div>
+      <div class="card"><img src="https://via.placeholder.com/150"><p>Fatima</p></div>
+    </div>
+  </section>
+
+  <section class="omens">
+    <h3>Key Omens</h3>
+        <div class="cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/150">
+        <h4>The Oasis</h4>
+        <p>Where Santiago meets the Englishman and learns the language of the world.</p>
+        <a href="#">Details</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/150">
+        <h4>The Pyramids</h4>
+        <p>The final destination where dreams and reality merge.</p>
+               <a href="#">Details</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/150">
+        <h4>Merchant’s Shop</h4>
+        <p>Where Santiago learns the value of persistence and faith.</p>
+        <a href="#">Details</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <form>
+          <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="info">
+      <h4>Santiago's Caravan HQ</h4>
+      <p>Desert winds, somewhere in Sahara</p>
+          <p>Email: santiago@alchemist.quest</p>
+      <p>Tel: +123 456 789</p>
+    </div>
+    <footer>
+  <div class="footer-content">
+    <div class="about">
+      <h4>The Alchemist</h4>
+      <p>A tale of dreams, omens, and the universal language of the heart.</p>
+    </div>
+    <div class="links">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#">Omens</a></li>
+        <li><a href="#">Discover</a></li>
+        <li><a href="#">Contact</a></li>
+              </ul>
+    </div>
+    <div class="follow">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 The Caravan. Seek your Personal Legend.</p>
+  </div>
+</footer>
+  </section>
+</body>
+</html>
